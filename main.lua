@@ -2,6 +2,8 @@
 Class = require 'class'
 
 require 'states/Start'
+require 'states/Play'
+require 'states/End'
 
 
 WINDOW_WIDTH = 1280
@@ -13,11 +15,13 @@ function love.load()
     love.window.setTitle('My Game')
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
     
-    Start()
 end
 
 
 function love.update(dt)
+    if GameState == 'Start' then
+        Start:update(dt)
+    end
 
 end
 

@@ -1,5 +1,5 @@
 Player = Class{}
 
-function Player:init()
+function Player:init(num)
     
 end
