@@ -5,6 +5,12 @@ require 'states/Start'
 require 'states/Play'
 require 'states/End'
 
+require 'Util'
+
+require 'Player'
+require 'World'
+
+state = 'Start'
 
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
@@ -14,14 +20,11 @@ function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
     love.window.setTitle('My Game')
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
-    
 end
 
 
 function love.update(dt)
-    if GameState == 'Start' then
-        Start:update(dt)
-    end
+    print(states[state])
 
 end
 

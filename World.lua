@@ -1,4 +1,4 @@
-World = Clas{}
+World = Class{}
 
 function World:init()
     self.bgR = math.random(255)

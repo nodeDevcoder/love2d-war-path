@@ -7,7 +7,6 @@ states['End'] = End()
 
 state = states['Start']
 
-
 players = {}
 
 player_keys = {}
