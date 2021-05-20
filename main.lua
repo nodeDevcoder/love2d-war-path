@@ -12,14 +12,16 @@ require 'Player'
 
 state = 'Start'
 
-WINDOW_WIDTH = 1280
-WINDOW_HEIGHT = 720
+WINDOW_WIDTH = 0
+WINDOW_HEIGHT = 0
 
 function love.load()   
+    love.window.setFullscreen(true)
     math.randomseed(os.time())
     love.graphics.setDefaultFilter('nearest', 'nearest')
-    love.window.setTitle('My Game')
-    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
+    love.window.setTitle('War Path')
+
+    WINDOW_WIDTH, WINDOW_HEIGHT = love.graphics.getDimensions()
 end
 
 
@@ -36,7 +38,7 @@ end
 function love.draw()
 
     states[state]:render()
-    
+
     -- love.graphics.setBackgroundColor(1, 1, 1)
     -- local width, height = love.graphics.getDimensions()
     -- love.graphics.setScissor(0, 0, width / 2, height)
