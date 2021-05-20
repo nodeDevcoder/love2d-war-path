@@ -7,8 +7,8 @@ require 'states/End'
 
 require 'Util'
 
-require 'Player'
 require 'World'
+require 'Player'
 
 state = 'Start'
 
@@ -24,8 +24,13 @@ end
 
 
 function love.update(dt)
-    print(states[state])
 
+    states[state]:update(dt)
+
+end
+
+function love.keypressed(key) 
+    states[state]:keypressed(key)
 end
 
 function love.draw()

@@ -7,6 +7,8 @@ states['End'] = End()
 
 state = states['Start']
 
+num_pl = nil
+
 players = {}
 
 player_keys = {}
