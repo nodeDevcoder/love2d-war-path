@@ -12,6 +12,8 @@ function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
     love.window.setTitle('My Game')
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
+    
+    Start()
 end
 
 
