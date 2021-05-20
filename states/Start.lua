@@ -2,7 +2,8 @@ Start = Class{}
 
 
 function Start:init()
-
+    self.players = 2
+    
 end
 
 
