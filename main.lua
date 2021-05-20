@@ -34,6 +34,9 @@ function love.keypressed(key)
 end
 
 function love.draw()
+
+    states[state]:render()
+    
     -- love.graphics.setBackgroundColor(1, 1, 1)
     -- local width, height = love.graphics.getDimensions()
     -- love.graphics.setScissor(0, 0, width / 2, height)

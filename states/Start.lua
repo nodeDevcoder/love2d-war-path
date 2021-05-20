@@ -16,5 +16,5 @@ function Start:keypressed(key)
 end
 
 function Start:render()
-
+    love.graphics.setBackgroundColor(204 / 255, 98 / 255, 22 / 255)
 end
