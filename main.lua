@@ -16,13 +16,11 @@ WINDOW_WIDTH = 0
 WINDOW_HEIGHT = 0
 
 function love.load()   
-    love.window.setFullscreen(false)
+    love.window.setFullscreen(true)
     math.randomseed(os.time())
     love.graphics.setDefaultFilter('nearest', 'nearest')
     love.window.setTitle('War Path')
     states['Start'] = Start()
-    states['Play'] = Play()
-    states['End'] = End()
 
     WINDOW_WIDTH, WINDOW_HEIGHT = love.graphics.getDimensions()
 end
