@@ -40,7 +40,12 @@ function Play:render()
 
     if self.ct == false and #players == 0 then
         for i = 1, self.players do 
-            players[i] = Player()
+            players[i] = Player(math.random(1, 3))
         end
+        world = World(players)
+    end
+
+    for i = 1, #players do
+        players[i]:render()
     end
 end
