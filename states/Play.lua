@@ -15,5 +15,5 @@ function Play:keypressed(key)
 end
 
 function Play:render()
-
+    love.graphics.setBackgroundColor(1, 1, 1)
 end
