@@ -14,10 +14,6 @@ fonts = {
 ---------------------------------------------------------
 states = {}
 
-states['Start'] = Start()
-states['Play'] = Play()
-states['End'] = End()
-
 state = states['Start']
 
 num_pl = nil
