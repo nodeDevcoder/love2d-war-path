@@ -10,13 +10,11 @@ function Start:update(dt)
 end
 
 function Start:keypressed(key)
-    print(num_pl)
-    print(key)
     if key == '2' or key == '4' then
         num_pl = key
     elseif key == 'return' then 
         if not(num_pl == nil) and num_pl == '2' or num_pl == '4' then
-            states['Play'] = Play()
+            states['Play'] = Play(num_pl)
             state = 'Play'
         end 
     end
