@@ -24,8 +24,7 @@ function Start:render()
     love.graphics.setFont(fonts.lovelo.large)
     love.graphics.printf('Welcome to War Path!', 0, 100, WINDOW_WIDTH, 'center')
 
-    love.graphics.setLineWidth(10)
-    love.graphics.line(-5, 150, 150, -5) -- top left band1 (-5 to cover empty sides)
-    love.graphics.line(-5, 200, 200, -5) -- top left band2 (-5 to cover empty sides)
-    -- love.graphics.setBackgroundColor(1, 1, 1)
+    love.graphics.setLineWidth(20)
+    love.graphics.line(-10, 150, 150, -10) -- top left band1 (-5 to cover empty sides)
+    love.graphics.line(-10, 220, 220, -10) -- top left band2 (-5 to cover empty sides)
 end

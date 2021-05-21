@@ -35,7 +35,7 @@ function love.keypressed(key)
     if key == 'escape' then
         love.event.quit()
     end
-    
+
     states[state]:keypressed(key)
 end
 
