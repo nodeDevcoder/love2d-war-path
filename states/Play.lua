@@ -24,6 +24,13 @@ function Play:update(dt)
         self.ct = false
     end
 
+    if world then 
+        world:update(dt) 
+    end
+
+    for i = 1, #players do
+        players[i]:update(dt)
+    end
     
 end
 
@@ -38,14 +45,20 @@ function Play:render()
         love.graphics.printf(tostring(math.floor(self.ct_time) + 1), 0, 300, WINDOW_WIDTH, 'center')
     end
 
-    if self.ct == false and #players == 0 then
-        for i = 1, self.players do 
-            players[i] = Player(math.random(1, 3))
-        end
+    if self.ct == false and not(world) then
         world = World(players)
     end
 
-    for i = 1, #players do
-        players[i]:render()
-    end
+    if world then world:render() end
+
+    -- if self.ct == false and #players == 0 then
+    --     for i = 1, self.players do 
+    --         players[i] = Player(math.random(1, 3))
+    --     end
+    --     world = World(players)
+    -- end
+
+    -- for i = 1, #players do
+    --     players[i]:render()
+    -- end
 end
