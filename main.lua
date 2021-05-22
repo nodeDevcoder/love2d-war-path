@@ -20,9 +20,12 @@ function love.load()
     math.randomseed(os.time())
     love.graphics.setDefaultFilter('nearest', 'nearest')
     love.window.setTitle('War Path')
-    states['Start'] = Start()
+    generateTileSets()
+    generateToppers()
 
+    states['Start'] = Start()
     WINDOW_WIDTH, WINDOW_HEIGHT = love.graphics.getDimensions()
+    
 end
 
 

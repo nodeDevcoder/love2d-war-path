@@ -7,7 +7,6 @@ function Play:init(num)
     self.bgG = math.random(255)
     self.bgB = math.random(255)
 
-    self.players = tonumber(num)
 end
 
 
@@ -35,7 +34,7 @@ function Play:update(dt)
 end
 
 function Play:keypressed(key)
-
+    
 end
 
 function Play:render()
@@ -45,18 +44,17 @@ function Play:render()
         love.graphics.printf(tostring(math.floor(self.ct_time) + 1), 0, 300, WINDOW_WIDTH, 'center')
     end
 
+    if self.ct == false and #players == 0 then
+        for i = 1, tonumber(num_pl) do 
+            players[i] = Player(i)
+        end
+    end
+
     if self.ct == false and not(world) then
         world = World(players)
     end
 
     if world then world:render() end
-
-    -- if self.ct == false and #players == 0 then
-    --     for i = 1, self.players do 
-    --         players[i] = Player(math.random(1, 3))
-    --     end
-    --     world = World(players)
-    -- end
 
     -- for i = 1, #players do
     --     players[i]:render()
